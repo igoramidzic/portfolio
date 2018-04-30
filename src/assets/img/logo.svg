@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #4f87fb;
+      }
+    </style>
+  </defs>
+  <g id="Logo" transform="translate(-100 -122.476)">
+    <rect id="Rectangle_1" data-name="Rectangle 1" class="cls-1" width="49.885" height="49.818" transform="translate(100 122.658)"/>
+    <path id="A" class="cls-2" d="M682.14,210.476l-20.893,50,20.893-34.963,21.875,34.963Z" transform="translate(-554.015 -88)"/>
+    <path id="I" class="cls-2" d="M0,0,3.543,49.815,7.081,0Z" transform="translate(100.155 122.661)"/>
+  </g>
+</svg>

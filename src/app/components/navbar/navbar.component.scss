@@ -1,0 +1,54 @@
+@import '../../app.component.scss';
+
+.main-navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid $border_color;
+  font-family: $primary_font;
+  .center-space-between-content {
+    height: 60px;
+
+    .left-container, .center-container, .right-container {
+      width: 100%;
+    }
+
+    .left-container {
+      height: 100%;
+      .menu-btn {
+        border-right: 1px solid $border_color;
+        width: 60px;
+        height: 100%;
+        font-size: 20px;
+      }
+    }
+
+    .center-container {
+      text-align: center;
+      color: $text_color;
+      font-size: 13px;
+
+      .logo-img {
+        max-height: 32px;
+      }
+    }
+
+    .right-container {
+      height: 100%;
+      text-align: right;
+      .me-btn {
+        border-left: 1px solid $border_color;
+        height: 100%;
+        padding: 8px 28px;
+        color: $text_color;
+        .name-container {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+
+}
+
+@media only screen and (max-width: 575px) {
+
+}

@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@import './app/app.component.scss';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $gray_background_color;
+  margin: 0;
+}
