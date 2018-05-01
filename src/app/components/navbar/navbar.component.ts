@@ -1,4 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {MeService} from '../../services/me.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +10,7 @@ export class NavbarComponent implements OnInit {
 
   @Output() onToggleSidebar = new EventEmitter<boolean>();
 
-  constructor() { }
+  constructor(public me: MeService) { }
 
   ngOnInit() {
   }

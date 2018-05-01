@@ -8,5 +8,8 @@
         <app-about-me></app-about-me>
       </div>
     </div>
+    <div class="grid-container grid-system-2">
+      <app-link *ngFor="let link of me.me?.links" [link]="link"></app-link>
+    </div>
   </div>
 </div>

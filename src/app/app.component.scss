@@ -71,6 +71,15 @@ $primary_font: 'Roboto', sans-serif;
     -ms-flex-pack: justify;
     justify-content: space-between;
   }
+  .vertical-center-space-between-content {
+    align-items: center;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: justify;
+    justify-content: flex-start;
+  }
   .center-left-content {
     align-items: center;
     display: -ms-flexbox;

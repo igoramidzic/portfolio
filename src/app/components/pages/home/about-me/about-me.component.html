@@ -1,18 +1,19 @@
 <div class="about-me-container card">
   <div class="card-content top-content">
     <div class="profile-image-container">
-      <div class="profile-image-background" style="background-image: url('assets/img/pro-pic-3.jpg')"></div>
+      <div class="profile-image-background"
+           [ngStyle]="{'background-image': 'url(' + me.me?.pro_pic_url + ')'}"></div>
     </div>
 
     <div class="info-container">
-      <h4 class="name">Igor Amidzic</h4>
-      <h5 class="description">Frontend Web Developer</h5>
+      <h4 class="name">{{ me.me?.name || 'Loading' }}</h4>
+      <h5 class="description">{{ me.me?.title || 'Loading' }}</h5>
     </div>
   </div>
 
   <div class="resume-download-container">
-    <button class="download-btn" onclick="window.open('assets/resume.pdf')">
+    <a [href]="me.me?.resume_url" target="_blank" class="download-btn" >
       <i class="fas fa-download"></i> Download resume
-    </button>
+    </a>
   </div>
 </div>

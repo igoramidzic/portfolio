@@ -24,7 +24,7 @@
   }
 
   .grid-system-2 {
-    grid-template-columns: 5fr 3fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
@@ -46,9 +46,11 @@
 
 @media only screen and (max-width: 710px) {
   .home-page-container {
-    .grid-container {
+    .grid-system-1 {
       grid-template-columns: 1fr !important;
     }
+    .grid-system-2 {
+      grid-template-columns: 1fr 1fr !important;
+    }
   }
-
 }

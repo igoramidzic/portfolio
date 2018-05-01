@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MeService} from '../../../../services/me.service';
 
 @Component({
   selector: 'app-about-me',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutMeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private me: MeService) { }
 
   ngOnInit() {
   }
