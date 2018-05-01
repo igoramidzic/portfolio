@@ -10,6 +10,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidemenuComponent } from './components/sidemenu/sidemenu.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HomeComponent } from './components/pages/home/home.component';
+import { AboutMeComponent } from './components/pages/home/about-me/about-me.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { HomeComponent } from './components/pages/home/home.component';
     NavbarComponent,
     SidemenuComponent,
     SidebarComponent,
-    HomeComponent
+    HomeComponent,
+    AboutMeComponent
   ],
   imports: [
     BrowserModule,

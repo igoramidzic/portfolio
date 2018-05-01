@@ -1,5 +1,54 @@
 @import '../../../app.component.scss';
 
 .home-page-container {
+  overflow-y: scroll;
+  max-height: 100%;
+
+  .max-width-container {
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-gap: 24px;
+    width: 100%;
+    margin-bottom: 24px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .grid-system-1 {
+    grid-template-columns: 3fr 7fr;
+  }
+
+  .grid-system-2 {
+    grid-template-columns: 5fr 3fr;
+  }
+}
+
+@media only screen and (min-width: 851px) {
+  .home-page-container {
+    padding: 48px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .home-page-container {
+    padding: 24px;
+
+    .grid-system-1 {
+      grid-template-columns: 4fr 7fr !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 710px) {
+  .home-page-container {
+    .grid-container {
+      grid-template-columns: 1fr !important;
+    }
+  }
 
 }

@@ -26,7 +26,6 @@ $primary_font: 'Roboto', sans-serif;
   }
 
   .main-page-content-container {
-    padding: 24px;
     background-color: $gray_background_color;
     position: absolute;
     top: 0;
@@ -83,13 +82,13 @@ $primary_font: 'Roboto', sans-serif;
   }
 }
 
-@media only screen and (min-width: 476px) {
+@media only screen and (min-width: 851px) {
   .main-page-content-container {
     left: 60px;
   }
 }
 
-@media only screen and (max-width: 475px) {
+@media only screen and (max-width: 850px) {
   .sidebar {
     display: none;
   }
