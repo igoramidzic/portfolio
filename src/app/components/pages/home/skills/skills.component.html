@@ -1,0 +1,42 @@
+
+<div class="skills-container card">
+
+  <div class="grid-container grid-system-1">
+    <div class="skills-container">
+      <div class="card-content">
+        <h5 class="card-title">SKILLS</h5>
+        <app-loading-dots *ngIf="!l[0] && !l[1] && !l[2] && !l[3]"></app-loading-dots>
+
+
+        <div class="skills-list-container center-container">
+          <div class="skills-list center-container vertical-center-space-between-content">
+            <div class="skill-item center-space-between-content"
+                 *ngFor="let skill of me.me?.skills; let i = index;">
+              <img class="logo-img" [src]="skill.logo_url" (load)="l[i] = true;" alt="">
+
+              <div class="skill-name-container">
+                <button class="skill-btn">{{ skill.name }}</button>
+              </div>
+
+
+              <div class="experience-container">
+                <div class="progress-container"
+                     [ngStyle]="{ 'background-color': 'rgba(' + skill.color + ', 0.2)' }">
+                  <div class="progress"
+                       [ngStyle]="{ 'background-color': 'rgb(' + skill.color + ')',
+                                    'width': skill.experience + '%' }"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chart-container">
+      <div class="chart-content">
+        <h5 class="header">Coming soon.</h5>
+      </div>
+    </div>
+  </div>
+</div>

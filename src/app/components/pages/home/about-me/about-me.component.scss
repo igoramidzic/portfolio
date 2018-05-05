@@ -1,10 +1,15 @@
 @import '../../../../app.component.scss';
 
 .about-me-container {
-
-  .top-content {
-    border-bottom: 1px solid $border_color;
+  height: 100%;
+  .center-container {
+    height: 100%;
+    .vertical-center-space-between-content {
+      height: 100%;
+    }
   }
+
+  .top-content {}
 
   .profile-image-container {
     text-align: center;
@@ -30,15 +35,31 @@
       margin: 0 0 8px 0;
     }
 
+    .name-placeholder {
+      height: 17px;
+      width: 100px;
+      background-color: lighten($border_color, 2%);
+      margin: 0 auto 8px auto;
+    }
+
     .description {
       font-size: 13px;
       font-weight: 300;
       color: $primary_color;
       margin: 0;
     }
+
+    .description-placeholder {
+      height: 17px;
+      width: 150px;
+      background-color: lighten($border_color, 2%);
+      margin: auto;
+    }
   }
 
   .resume-download-container {
+    width: 100%;
+    border-top: 1px solid $border_color;
     .download-btn {
       border: none;
       padding: 24px 0;
