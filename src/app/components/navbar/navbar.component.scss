@@ -41,6 +41,13 @@
         color: $text_color;
         .name-container {
           text-align: left;
+
+          .name-placeholder {
+            height: 17px;
+            width: 70px;
+            background-color: lighten($border_color, 2%);
+            margin: auto;
+          }
         }
       }
     }

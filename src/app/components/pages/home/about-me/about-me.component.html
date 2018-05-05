@@ -1,19 +1,26 @@
 <div class="about-me-container card">
-  <div class="card-content top-content">
-    <div class="profile-image-container">
-      <div class="profile-image-background"
-           [ngStyle]="{'background-image': 'url(' + me.me?.pro_pic_url + ')'}"></div>
-    </div>
+  <div class="center-container">
+    <div class="vertical-center-space-between-content">
+      <div class="card-content top-content">
+        <div class="profile-image-container">
+          <div class="profile-image-background"
+               [ngStyle]="{'background-image': 'url(' + me.me?.pro_pic_url + ')'}"></div>
+        </div>
 
-    <div class="info-container">
-      <h4 class="name">{{ me.me?.name || 'Loading' }}</h4>
-      <h5 class="description">{{ me.me?.title || 'Loading' }}</h5>
+        <div class="info-container">
+          <div class="name-placeholder" *ngIf="!me.me?.name"></div>
+          <h4 class="name" *ngIf="me.me?.name">{{ me.me?.name }}</h4>
+          <div class="description-placeholder" *ngIf="!me.me?.title"></div>
+          <h5 class="description" *ngIf="me.me?.title">{{ me.me?.title }}</h5>
+        </div>
+      </div>
+
+      <div class="resume-download-container">
+        <a [href]="me.me?.resume_url" target="_blank" class="download-btn">
+          <i class="fas fa-download"></i> Download resume
+        </a>
+      </div>
     </div>
   </div>
 
-  <div class="resume-download-container">
-    <a [href]="me.me?.resume_url" target="_blank" class="download-btn" >
-      <i class="fas fa-download"></i> Download resume
-    </a>
-  </div>
 </div>

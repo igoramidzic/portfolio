@@ -4,6 +4,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { AngularFireModule } from 'angularfire2';
 import {AngularFirestore} from 'angularfire2/firestore';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { ChartModule } from 'angular2-chartjs';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -16,6 +19,8 @@ import { AboutMeComponent } from './components/pages/home/about-me/about-me.comp
 import {environment} from '../environments/environment';
 import {MeService} from './services/me.service';
 import { LinkComponent } from './components/pages/home/link/link.component';
+import { SkillsComponent } from './components/pages/home/skills/skills.component';
+import { LoadingDotsComponent } from './components/spinners/loading-dots/loading-dots.component';
 
 
 @NgModule({
@@ -26,7 +31,9 @@ import { LinkComponent } from './components/pages/home/link/link.component';
     SidebarComponent,
     HomeComponent,
     AboutMeComponent,
-    LinkComponent
+    LinkComponent,
+    SkillsComponent,
+    LoadingDotsComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +41,9 @@ import { LinkComponent } from './components/pages/home/link/link.component';
     BrowserAnimationsModule,
     MatSidenavModule,
     AngularFireModule.initializeApp(environment.firebase),
+    MatProgressBarModule,
+    ChartModule,
+    NgxChartsModule
   ],
   providers: [MeService, AngularFirestore],
   bootstrap: [AppComponent]

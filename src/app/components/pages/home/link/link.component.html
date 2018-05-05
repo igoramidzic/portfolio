@@ -1,12 +1,13 @@
 <div class="link-container card">
+  <app-loading-dots *ngIf="!loaded1 && !loaded2"></app-loading-dots>
   <a class="link" [href]="link.url" target="_blank">
     <div class="center-container">
       <div class="vertical-center-space-between-content">
         <div class="img-container logo-img-container">
-          <img class="logo-img" [src]="link.logo_url" alt="">
+          <img class="logo-img" [src]="link.logo_url" (load)="loaded1 = true;" alt="">
         </div>
         <div class="img-container logo-text-img-container">
-          <img class="logo-text-img" [src]="link.logo_text_url" alt="">
+          <img class="logo-text-img" [src]="link.logo_text_url" (load)="loaded2 = true;" alt="">
         </div>
       </div>
     </div>

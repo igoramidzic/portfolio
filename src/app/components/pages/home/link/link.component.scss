@@ -1,6 +1,8 @@
 @import '../../../../app.component.scss';
 
 .link-container {
+  position: relative;
+
   &:hover {
     background-color: lighten($border_color, 5%);
   }
@@ -10,7 +12,7 @@
     display: block;
 
     .vertical-center-space-between-content {
-      padding: 24px;
+      padding: 24px 0;
       position: relative;
       height: 185px;
       margin: auto;
