@@ -25,6 +25,7 @@
 
       .settings-container {
         .settings-btn {
+          background-color: #ffffff;
           padding: 8px;
           margin: -8px 0;
           border: 1px solid $border_color;
@@ -129,6 +130,7 @@
     text-align: center;
     padding: 25px;
     .toggle-more-projects-btn {
+      background-color: #ffffff;
       font-family: $primary_font;
       font-size: 15px;
       color: $text_color;
