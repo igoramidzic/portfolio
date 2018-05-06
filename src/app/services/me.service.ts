@@ -8,6 +8,8 @@ export class MeService {
 
   $me: Observable<any> = new Observable();
   me: any;
+  $projects: Observable<any> = new Observable();
+  projects: any;
 
   constructor(private afs: AngularFirestore) {
     this.$me = this.afs.doc('users/igoramidzic')
@@ -15,6 +17,13 @@ export class MeService {
 
     this.$me.subscribe(me => {
       this.me = me;
+    });
+
+    this.$projects = this.afs.collection('users/igoramidzic/projects', ref => ref.orderBy('completion', 'desc'))
+      .valueChanges();
+
+    this.$projects.subscribe(projects => {
+      this.projects = projects;
     })
 
   }

@@ -1,0 +1,90 @@
+<div class="projects-container">
+
+  <div class="grid-container grid-system-3">
+    <div class="projects-navbar-container  card">
+      <div class="card-content">
+        <div class="center-container">
+          <div class="center-space-between-content">
+            <div><h5 class="title">Projects</h5></div>
+            <div class="settings-container">
+              <button class="settings-btn">
+                <i class="fas fa-cog"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-container" *ngFor="let project of projects; let i = index;">
+
+    <div class="grid-container"
+         [ngClass]="{ 'grid-system-1': i % 2 !== 0, 'grid-system-2': i % 2 === 0 }"
+          *ngIf="i < maxProjectsShow">
+
+      <div class="project-image-container card">
+        <a [href]="project.live_url" target="_blank" class="live-link">
+          <div class="background-image-container"
+               [ngStyle]="{'background-image': 'url(' + project.img_url + ')'}">
+            <div class="background-cover-container"></div>
+          </div>
+        </a>
+      </div>
+
+      <div class="project-description-container card">
+        <div class="card-content">
+          <h5 class="header">{{ project.name }}</h5>
+          <p class="description">{{ project.description }}</p>
+
+          <div class="technologies-container center-container"
+            *ngIf="project.technologies">
+            <ul class="technologies-list center-left-content">
+              <li class="technology-item"
+                  *ngFor="let technology of project.technologies;">
+                <img class="technology-img"
+                     [matTooltip]="technology.name"
+                     [matTooltipShowDelay]="300"
+                     [src]="technology.img_url"
+                     alt="{{ technology.name }}">
+              </li>
+            </ul>
+          </div>
+
+          <div class="links-container">
+            <a [href]="project.repo_url"
+               *ngIf="project.repo_url"
+               target="_blank"
+               class="action-link github-link">
+              Github
+            </a>
+            <a [href]="project.live_url"
+               *ngIf="project.live_url"
+               target="_blank"
+               class="action-link visit-link">
+              Visit
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="grid-container grid-system-3" *ngIf="projects?.length > 3">
+    <div class="toggle-more-projects-container">
+      <button class="toggle-more-projects-btn"
+              *ngIf="maxProjectsShow == 3"
+              (click)="maxProjectsShow = projects?.length">
+        Show more projects
+      </button>
+
+      <button class="toggle-more-projects-btn"
+              *ngIf="maxProjectsShow == projects?.length"
+              (click)="maxProjectsShow = 3">
+        Show fewer projects
+      </button>
+    </div>
+  </div>
+
+</div>

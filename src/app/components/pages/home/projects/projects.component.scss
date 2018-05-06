@@ -1,0 +1,172 @@
+@import '../../../../app.component.scss';
+
+.projects-container {
+
+  .grid-container {
+    display: grid;
+    grid-gap: 24px;
+    width: 100%;
+    margin-bottom: 24px;
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  .projects-navbar-container {
+    font-family: $primary_font;
+
+    .card-content {
+      .title {
+        font-size: 18px;
+        font-weight: 300;
+        color: $text_color;
+        margin: 0;
+      }
+
+      .settings-container {
+        .settings-btn {
+          padding: 8px;
+          margin: -8px 0;
+          border: 1px solid $border_color;
+          border-radius: 3px;
+          outline: none;
+          color: $gray_text_color;
+          font-size: 20px;
+          &:hover {
+            background-color: lighten($border_color, 5%);
+          }
+        }
+      }
+    }
+  }
+
+  .project-container {
+    margin-bottom: 24px;
+
+    .project-image-container {
+      overflow: hidden;
+
+      .background-image-container {
+        background: #ffffff no-repeat center center;
+        background-size: cover;
+        height: 100%;
+        min-height: 250px;
+        position: relative;
+
+        .background-cover-container {
+          background-color: transparent;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+          }
+        }
+      }
+    }
+
+    .project-description-container {
+      font-family: $primary_font;
+      .header {
+        color: $gray_text_color;
+        font-size: 18px;
+        font-weight: 400;
+        margin: 0 0 16px 0;
+      }
+
+      .description {
+        font-size: 14px;
+        font-weight: 300;
+        margin: 0 0 16px 0;
+        line-height: 1.8;
+      }
+
+      .technologies-container {
+        margin-bottom: 16px;
+        .technologies-list {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          .technology-item {
+            display: inline-block;
+            margin-right: 16px;
+            .technology-img {
+              max-height: 25px;
+              max-width: 35px;
+            }
+          }
+        }
+      }
+
+      .links-container {
+        .action-link {
+          padding: 8px;
+          min-width: 90px;
+          display: inline-block;
+          text-align: center;
+          font-size: 14px;
+          font-weight: 300;
+          color: $text_color;
+          outline: none;
+          border: 1px solid $border_color;
+          border-radius: 3px;
+          text-decoration: none;
+          margin-right: 16px;
+          &:last-child {
+            margin-right: 0;
+          }
+          &:hover {
+            background-color: lighten($border_color, 5%);
+          }
+        }
+      }
+    }
+  }
+
+  .toggle-more-projects-container {
+    text-align: center;
+    padding: 25px;
+    .toggle-more-projects-btn {
+      font-family: $primary_font;
+      font-size: 15px;
+      color: $text_color;
+      border: 1px solid $border_color;
+      border-radius: 3px;
+      padding: 8px 16px;
+      outline: none;
+      &:hover {
+        background-color: lighten($border_color, 5%);
+      }
+    }
+  }
+
+}
+
+@media only screen and (min-width: 711px) {
+  .grid-system-1 {
+    grid-template-columns: 5fr 8fr;
+  }
+
+  .grid-system-2 {
+    grid-template-columns: 8fr 5fr;
+
+    .project-image-container {
+      order: 2;
+    }
+    .project-description-container {
+      order: 1;
+    }
+  }
+}
+
+@media only screen and (max-width: 710px) {
+  .grid-system-1 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-system-2 {
+    grid-template-columns: 1fr;
+  }
+}

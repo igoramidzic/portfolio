@@ -7,6 +7,7 @@ import {AngularFirestore} from 'angularfire2/firestore';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { ChartModule } from 'angular2-chartjs';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -21,6 +22,7 @@ import {MeService} from './services/me.service';
 import { LinkComponent } from './components/pages/home/link/link.component';
 import { SkillsComponent } from './components/pages/home/skills/skills.component';
 import { LoadingDotsComponent } from './components/spinners/loading-dots/loading-dots.component';
+import { ProjectsComponent } from './components/pages/home/projects/projects.component';
 
 
 @NgModule({
@@ -33,7 +35,8 @@ import { LoadingDotsComponent } from './components/spinners/loading-dots/loading
     AboutMeComponent,
     LinkComponent,
     SkillsComponent,
-    LoadingDotsComponent
+    LoadingDotsComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,8 @@ import { LoadingDotsComponent } from './components/spinners/loading-dots/loading
     AngularFireModule.initializeApp(environment.firebase),
     MatProgressBarModule,
     ChartModule,
-    NgxChartsModule
+    NgxChartsModule,
+    MatTooltipModule
   ],
   providers: [MeService, AngularFirestore],
   bootstrap: [AppComponent]
