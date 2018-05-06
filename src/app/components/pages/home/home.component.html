@@ -1,5 +1,6 @@
 <div class="home-page-container">
   <div class="max-width-container">
+
     <div class="grid-container grid-system-1">
       <div class="about-me-component">
         <app-about-me></app-about-me>
@@ -8,8 +9,14 @@
         <app-skills></app-skills>
       </div>
     </div>
+
+    <div class="grid-container grid-system-3">
+      <app-projects [projects]="me.projects"></app-projects>
+    </div>
+
     <div class="grid-container grid-system-2">
       <app-link *ngFor="let link of me.me?.links" [link]="link"></app-link>
     </div>
+
   </div>
 </div>

@@ -5,7 +5,7 @@
   max-height: 100%;
 
   .max-width-container {
-    max-width: 1000px;
+    max-width: 1028px;
     margin: auto;
   }
 
@@ -26,6 +26,14 @@
   .grid-system-2 {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+
+  .grid-system-3 {
+    grid-template-columns: 1fr;
+  }
+
+
+
+
 }
 
 @media only screen and (min-width: 851px) {
